@@ -1,0 +1,15 @@
+1. Copy and paste the custom folder into your misson.map.pbo
+	(if you already have a custom folder in your mission.map.pbo then just copy and paste the SeventhFleetSpawn.sqf file into your custome folder.)
+	
+2. copy the code below into your init.sqf located in your mission.map.pbo
+	[] execVM "custom\SeventhFleetSpawn.sqf";
+	
+To change where the Carrier and Destroyers spawn in at, you will need to get the chordinates and put them in for each one
+
+Line 4 is for the Carrier and looks like this..... private _obj = ["Land_Carrier_01_base_F", [1510, 27224.2, 0], [-0.776351, -0.630301, 0], [0, 0, 1], true];
+[1510, 27224.2, 0] in this line of code is the only thing you need to change for a new location to spawn, you can leave the last number at 0.
+
+Now you need to change the Destroyer locations as well located on lines 47, 69, 91, and 113.
+
+To change the direction they are all facing you need to change each line that looks like this.......... _vehicle setDir 129.072;
+129.072 in this line of code is the direction in degrees.
